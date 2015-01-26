@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 - Inventory", "01 - Inventory\01 - Inventory.csproj", "{8F68524D-52C9-4112-A435-29D6961EFCA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - Asset Groups", "02 - Asset Groups\02 - Asset Groups.csproj", "{EF0190B7-B6E3-4F5B-8348-822C3FA17D2C}"
@@ -11,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 - Metrics", "04 - Metric
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 - StateTypes", "05 - State Types\05 - StateTypes.csproj", "{21EA9F50-B9E2-414A-BFCB-9B6B5A378E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 - Custom Actions", "06 - Custom Action\06 - Custom Actions.csproj", "{68D8F6E8-4047-43C8-969A-B604EEB843FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 - Custom Attributes", "06 - Custom Attributes\06 - Custom Attributes.csproj", "{CF513199-82AF-46B1-97A6-7D02FFE16333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,16 +75,16 @@ Global
 		{21EA9F50-B9E2-414A-BFCB-9B6B5A378E90}.Release|Mixed Platforms.Build.0 = Release|x86
 		{21EA9F50-B9E2-414A-BFCB-9B6B5A378E90}.Release|x86.ActiveCfg = Release|x86
 		{21EA9F50-B9E2-414A-BFCB-9B6B5A378E90}.Release|x86.Build.0 = Release|x86
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{68D8F6E8-4047-43C8-969A-B604EEB843FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

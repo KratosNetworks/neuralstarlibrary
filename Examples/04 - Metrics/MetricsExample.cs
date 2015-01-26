@@ -42,7 +42,7 @@ namespace Metrics
 
                 Metric performanceMetric = new AiMetrix.BusinessObject.Performance.Metric();
 
-                performanceMetric.MetricName = "Furlongs Per Fortnight";
+                performanceMetric.MetricName = "Average Furlongs Travelled";
                 performanceMetric.MetricType = "Gauge";
                 performanceMetric.MeasurementUnit = "raw";
                 performanceMetric.MetricGroup = "Test Metrics";

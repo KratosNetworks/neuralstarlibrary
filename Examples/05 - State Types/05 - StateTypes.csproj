@@ -36,14 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BusinessObject">
-      <HintPath>.\BusinessObject.dll</HintPath>
+    <Reference Include="BusinessObject, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NeuralStar\Framework\BusinessObject\bin\Debug\BusinessObject.dll</HintPath>
     </Reference>
-    <Reference Include="Common">
-      <HintPath>.\Common.dll</HintPath>
+    <Reference Include="Common, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NeuralStar\Framework\Common\bin\Debug\Common.dll</HintPath>
     </Reference>
-    <Reference Include="Nsda2">
-      <HintPath>.\Nsda2.dll</HintPath>
+    <Reference Include="Nsda2, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NeuralStar\Framework\Nsda2\bin\Debug\Nsda2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

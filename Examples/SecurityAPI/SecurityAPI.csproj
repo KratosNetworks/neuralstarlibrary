@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EA37E76B-28F3-430A-8E77-380B9458D573}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{40E2AE91-2107-4B0B-8369-05254B8E79CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Metrics</RootNamespace>
-    <AssemblyName>Metrics</AssemblyName>
+    <RootNamespace>SecurityAPI</RootNamespace>
+    <AssemblyName>SecurityAPI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -24,7 +24,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -36,17 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BusinessObject, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+    <Reference Include="BusinessObject, Version=9.8.1385.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\NeuralStar\Framework\BusinessObject\bin\Debug\BusinessObject.dll</HintPath>
+      <HintPath>NeuralStarLibraries\BusinessObject.dll</HintPath>
     </Reference>
-    <Reference Include="Common, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+    <Reference Include="Common, Version=9.8.1385.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\NeuralStar\Framework\Common\bin\Debug\Common.dll</HintPath>
+      <HintPath>NeuralStarLibraries\Common.dll</HintPath>
     </Reference>
-    <Reference Include="Nsda2, Version=9.8.942.0, Culture=neutral, PublicKeyToken=e8ad35ce1acea7d4, processorArchitecture=MSIL">
+    <Reference Include="Nsda2, Version=9.8.1385.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\NeuralStar\Framework\Nsda2\bin\Debug\Nsda2.dll</HintPath>
+      <HintPath>NeuralStarLibraries\Nsda2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,15 +53,52 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MetricsExample.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="SecurityStuff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecurityStuff.Designer.cs">
+      <DependentUpon>SecurityStuff.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SecurityStuff.resx">
+      <DependentUpon>SecurityStuff.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

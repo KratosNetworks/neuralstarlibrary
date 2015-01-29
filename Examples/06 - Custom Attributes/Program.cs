@@ -9,7 +9,7 @@ namespace CustomAttributesExample
         public static void Main(string[] args)
         {
             CustomAttributesExample example = new CustomAttributesExample();
-
+            example.CreateCustomAttributes();
         }
     }
 }

@@ -42,8 +42,11 @@ namespace StateTypesExample
             try {
                 Start();
 
-                Guid authServicesID = NSObject.Create("Authorization Services");
-                Guid unifiedComsID = NSObject.Create("Unified Communications Services");
+                //Guid authServicesID = NSObject.Create("Authorization Services");
+                //Guid unifiedComsID = NSObject.Create("Unified Communications Services");
+
+                NSObjects nsobjs = NSObjects.GetByDisplayName("Test Object");
+                NSObject nsobj = nsobjs[0];
 
                 // Let's create the state type "descriptor"
                 long hazconStateTypeID = StateType.Save("Hazardous Condition Status");
@@ -54,8 +57,9 @@ namespace StateTypesExample
                 StateTypeValue.Save(hazconStateTypeID, 2.ToString(), "Down", Color.Red.ToArgb());
 
                 // Let's assign that new state type to our objects
-                StateTypeNSObject.Save(authServicesID, hazconStateTypeID, "0", "Authorization Services has a hazcon status of 'Good'");
-                StateTypeNSObject.Save(unifiedComsID, hazconStateTypeID, "0", "Unified Communcation Services has a hazcon status of 'Good'");
+                StateTypeNSObject.Save(nsobj.NSObjectID, hazconStateTypeID, "0", "Authorization Services has a hazcon status of 'Good'");
+                //StateTypeNSObject.Save(authServicesID, hazconStateTypeID, "0", "Authorization Services has a hazcon status of 'Good'");
+                //StateTypeNSObject.Save(unifiedComsID, hazconStateTypeID, "0", "Unified Communcation Services has a hazcon status of 'Good'");
             } catch (Exception ex) {
                 Console.WriteLine("An exception has occured: " + ex.ToString());
             } finally {

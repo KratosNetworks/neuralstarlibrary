@@ -10,9 +10,10 @@ namespace Inventory
     {
         public static void Main(string[] args)
         {
-            //Login();
+            Login();
 
             InventoryExample example = new InventoryExample();
+            //example.AddInventory_100Objects();
             //example.AddInventory_Basic();
             //example.AddInventory_CreateWithClassification();
             //example.EditInventory();
@@ -30,7 +31,11 @@ namespace Inventory
             //example.GetNetworkVitals();
             //example.SetAvailability();
 
-            example.SetObjectToGroup();
+            //example.SetObjectToGroup();
+
+            example.CreateAction();
+
+            Logout();
 
             Console.Write("Press enter to continue...");
             Console.ReadLine();
@@ -46,6 +51,12 @@ namespace Inventory
             } else {
                 Console.WriteLine("Was not able to login");
             }
+        }
+
+        private static void Logout()
+        {
+            Console.WriteLine("Logging out...");
+            User.Logout();
         }
     }
 }

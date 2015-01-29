@@ -4,8 +4,9 @@ using System.Text;
 
 using AiMetrix.BusinessObject.Security;
 using AiMetrix.BusinessObject.Performance;
+using AiMetrix.BusinessObject.Inventory;
 
-namespace Metrics
+namespace MetricsExample
 {
     public class MetricsExample
     {
@@ -40,20 +41,38 @@ namespace Metrics
             try {
                 Start();
 
-                Metric performanceMetric = new AiMetrix.BusinessObject.Performance.Metric();
+                Metric performanceMetric = new Metric();
 
                 performanceMetric.MetricName = "Average Furlongs Travelled";
                 performanceMetric.MetricType = "Gauge";
-                performanceMetric.MeasurementUnit = "raw";
+                performanceMetric.MeasurementUnit = "ms";
                 performanceMetric.MetricGroup = "Test Metrics";
                 performanceMetric.Save();
-
-                //Metric.SetAggregationEnabled(metricID, enabled);
-                //Metric.SetMeasurementUnit(metricID, "hz");
-                //Metric.SetDopplerColorID(metricID, dopplerColorID);
             } catch (Exception ex) {
                 Console.WriteLine("An exception has occured: " + ex.ToString());
             } finally {
+                Stop();
+            }
+        }
+
+        public void SubmitMetrics(int metricValue)
+        {
+            try
+            {
+                Start();
+
+                Guid NSObjectID = NSObjects.GetByDisplayName("Test Object")[0].NSObjectID;
+                
+                MeasurementCollector mc = new MeasurementCollector();
+                mc.AddPointMeasurement(NSObjectID, 4619608813928850246, metricValue, DateTime.UtcNow);
+                mc.Save();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An exception has occured: " + ex.ToString());
+            }
+            finally
+            {
                 Stop();
             }
         }

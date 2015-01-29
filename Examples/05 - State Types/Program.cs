@@ -9,8 +9,8 @@ namespace StateTypesExample
         public static void Main(string[] args)
         {
             StateTypesExample example = new StateTypesExample();
-            //example.CreateStateTypes();
-            example.SetStateTypes();
+            example.CreateStateTypes();
+            //example.SetStateTypes();
 
             Console.Write("Press enter to continue...");
             Console.ReadLine();

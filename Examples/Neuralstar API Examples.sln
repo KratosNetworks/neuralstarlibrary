@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 - StateTypes", "05 - Sta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 - Custom Attributes", "06 - Custom Attributes\06 - Custom Attributes.csproj", "{CF513199-82AF-46B1-97A6-7D02FFE16333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionDLL", "ActionDLL\ActionDLL.csproj", "{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,16 @@ Global
 		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CF513199-82AF-46B1-97A6-7D02FFE16333}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7C26E6F4-F1B8-44D3-AF6D-F8EA66DF20BC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

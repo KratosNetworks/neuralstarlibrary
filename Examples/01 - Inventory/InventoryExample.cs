@@ -8,6 +8,8 @@ using AiMetrix.BusinessObject.Inventory;
 using AiMetrix.BusinessObject.UI;
 using AiMetrix.BusinessObject.Performance;
 
+using AiMetrix.BusinessObject.Events;
+
 namespace Inventory
 {
     public class InventoryExample
@@ -47,6 +49,35 @@ namespace Inventory
             } catch (Exception ex) {
                 Console.WriteLine("An exception has occured: " + ex.ToString());
             } finally {
+                Stop();
+            }
+        }
+
+        public void AddInventory_100Objects()
+        {
+            try
+            {
+                Start();
+
+                for (int i = 1; i <= 100; i++)
+                {
+                    // Simple Example
+                    NSObject.Create("Test Object " + i.ToString());
+
+                    // Creation by classification type example
+                    // NSObject.CreateByClassificationType(997074204, "Test Object " + i.ToString());
+
+                    NSObject.CreateByIPAddress("10.1.1." + i.ToString(), "Test Object " + i.ToString());
+                    
+                    Console.WriteLine("Creating Test Object " + i.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An exception has occured: " + ex.ToString());
+            }
+            finally
+            {
                 Stop();
             }
         }
@@ -330,6 +361,24 @@ namespace Inventory
                 Console.WriteLine("An exception has occured: " + ex.ToString());
             } finally {
                 Stop();
+            }
+        }
+
+        public void CreateAction()
+        {
+            try
+            {
+                ActionType atype = new ActionType();
+                atype.ActionTypeName = "TextLogFile";
+                atype.AssemblyName = "TextFileLog.dll";
+                atype.ParameterTemplate = "<ParameterTemplate></ParameterTemplate>";
+                atype.Parameters = new List<ActionType.ActionParameter>();
+                atype.Parameters.Add(new ActionType.ActionParameter("param1", "param1", "2", "some description", false));
+                atype.Save();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An exception has occured: " + ex.ToString());
             }
         }
         #endregion
